@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMenuInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/blue"
+        android:textSize="24dp"
+        android:text="@string/tvBuscarProductos"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/tvFiltros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMenuInicio"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="1dp"
+        android:padding="10dp"
+        android:text="@string/tvFiltros"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/etBusquedaProductos"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMenuInicio"
+        android:layout_toRightOf="@+id/tvFiltros"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_below="@id/tvMenuInicio"
+        android:layout_toRightOf="@id/etBusquedaProductos"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        app:srcCompat="@drawable/lupa" />
+
+    <ListView
+        android:id="@+id/lstProductos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/etBusquedaProductos"/>
+
+</RelativeLayout>
