@@ -1,39 +1,65 @@
 package com.nunegal.tfctienda.modelos;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
-public class Vendedor {
+public class Usuario {
 
-    String dni_vendedor;
+    @SerializedName("dni_usuario")
+    @Expose
+    String dni_usuario;
+
+    @SerializedName("nombre")
+    @Expose
     String nombre;
-    String apellidos;
-    String correo;
-    Date fecha_nacimiento;
-    String contraseña;
-    String telefono;
-    String beneficios;
 
-    public Vendedor() {
+    @SerializedName("apellidos")
+    @Expose
+    String apellidos;
+
+    @SerializedName("correo")
+    @Expose
+    String correo;
+
+    @SerializedName("contraseña")
+    @Expose
+    String contraseña;
+
+    @SerializedName("telefono")
+    @Expose
+    String telefono;
+
+    @SerializedName("esvendedor")
+    @Expose
+    Boolean esvendedor;
+
+    @SerializedName("beneficios")
+    @Expose
+    float beneficios;
+
+    public Usuario() {
 
     }
 
-    public Vendedor(String dni_vendedor, String nombre, String apellidos, String correo, Date fecha_nacimiento, String contraseña, String telefono, String beneficios) {
-        this.dni_vendedor = dni_vendedor;
+    public Usuario(String dni_usuario, String nombre, String apellidos, String correo, String contraseña, String telefono, Boolean esvendedor, float beneficios) {
+        this.dni_usuario = dni_usuario;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
-        this.fecha_nacimiento = fecha_nacimiento;
         this.contraseña = contraseña;
         this.telefono = telefono;
+        this.esvendedor = esvendedor;
         this.beneficios = beneficios;
     }
 
-    public String getDni_vendedor() {
-        return dni_vendedor;
+    public String getDni_usuario() {
+        return dni_usuario;
     }
 
-    public void setDni_vendedor(String dni_vendedor) {
-        this.dni_vendedor = dni_vendedor;
+    public void setDni_usuario(String dni_usuario) {
+        this.dni_usuario = dni_usuario;
     }
 
     public String getNombre() {
@@ -60,14 +86,6 @@ public class Vendedor {
         this.correo = correo;
     }
 
-    public Date getFecha_nacimiento() {
-        return fecha_nacimiento;
-    }
-
-    public void setFecha_nacimiento(Date fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
-    }
-
     public String getContraseña() {
         return contraseña;
     }
@@ -84,25 +102,33 @@ public class Vendedor {
         this.telefono = telefono;
     }
 
-    public String getBeneficios() {
+    public Boolean getEsvendedor() {
+        return esvendedor;
+    }
+
+    public void setEsvendedor(Boolean esvendedor) {
+        this.esvendedor = esvendedor;
+    }
+
+    public float getBeneficios() {
         return beneficios;
     }
 
-    public void setBeneficios(String beneficios) {
+    public void setBeneficios(float beneficios) {
         this.beneficios = beneficios;
     }
 
     @Override
     public String toString() {
-        return "Vendedor{" +
-                "dni_vendedor='" + dni_vendedor + '\'' +
+        return "Usuario{" +
+                "dni_usuario='" + dni_usuario + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", apellidos='" + apellidos + '\'' +
                 ", correo='" + correo + '\'' +
-                ", fecha_nacimiento=" + fecha_nacimiento +
                 ", contraseña='" + contraseña + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", beneficios='" + beneficios + '\'' +
+                ", esvendedor=" + esvendedor +
+                ", beneficios=" + beneficios +
                 '}';
     }
 }

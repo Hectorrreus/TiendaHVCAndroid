@@ -39,4 +39,5 @@
     <string name="btnCrearProducto">Crear producto</string>
     <string name="btnEliminarProducto">Eliminar producto</string>
     <string name="btnModificarProducto">Modificar producto</string>
+    <string name="chbEdad">Confirme que es mayor de edad</string>
 </resources>
